@@ -32,7 +32,7 @@ body {
 }
 
 .nav-bar {
-  padding: 1%;
+  padding: 10px;
   width: 98%;
   position: sticky;
   z-index: 12000;
@@ -70,12 +70,18 @@ body {
   line-height: 100%;
 }
 
-.nav-bar ul li .sub-menu:hover {
+.nav-bar ul li:hover .sub-menu {
   display:block;
 }
 
-.nav-bar li:hover{
-  border-bottom: 1px solid;
+.nav-bar li:not(#btn-little):hover::after{
+content: '';
+display: block;
+height: 2px;
+width: 100%;
+background-color: #000;
+position: absolute;
+bottom: -12px;
 }
 
 /* HEADER */
